@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,30 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome kit -->
+    <script
+      src="https://kit.fontawesome.com/e60a6371cc.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- tailwind customs -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              cRed: "#FF4240",
+              cDark: "#424247",
+              cGray: "#89898B",
+              cBlack: "#131318",
             },
           },
         },
@@ -27,11 +44,142 @@
     </script>
 
     <!-- custom style  -->
-    <style></style>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header class="md:px-12 lg:px-16">
+      <!-- nav start  -->
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow text-cDark"
+              >
+                <li class="hover:text-cRed"><a>Home</a></li>
+                <li class="hover:text-cRed"><a>About</a></li>
+                <li class="hover:text-cRed"><a>Pages</a></li>
+                <li class="hover:text-cRed"><a>Blog</a></li>
+                <li class="hover:text-cRed"><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl font-extrabold"
+              >Hockey<span class="text-cRed">'</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-cDark">
+              <li class="hover:text-cRed"><a>Home</a></li>
+              <li class="hover:text-cRed"><a>About</a></li>
+              <li class="hover:text-cRed"><a>Pages</a></li>
+              <li class="hover:text-cRed"><a>Blog</a></li>
+              <li class="hover:text-cRed"><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <i
+              class="fa-solid fa-magnifying-glass px-5 text-2xl text-cGray"
+            ></i>
+            <a class="btn bg-cRed text-white text-xl">Get Ticket</a>
+          </div>
+        </div>
+      </nav>
+      <!-- nav end  -->
+
+      <!-- slider start  -->
+      <section class="lg:relative">
+        <div>
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="src/Images/1.png" class="w-full grayscale" />
+              <div class="absolute left-5 bottom-5">
+                <a
+                  href="#slide4"
+                  class="btn btn-circle bg-cBlack text-white border-0"
+                  >❮</a
+                >
+                <a
+                  href="#slide2"
+                  class="btn btn-circle bg-cBlack text-white border-0"
+                  >❯</a
+                >
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="src/Images/1.png" class="w-full saturate-300" />
+                <div class="absolute left-5 bottom-5">
+                  <a
+                    href="#slide1"
+                    class="btn btn-circle bg-cBlack text-white border-0"
+                    >❮</a
+                  >
+                  <a
+                    href="#slide3"
+                    class="btn btn-circle bg-cBlack text-white border-0"
+                    >❯</a
+                  >
+                </div>
+              </div><div id="slide3" class="carousel-item relative w-full">
+                <img src="src/Images/1.png" class="w-full contrast-300" />
+                <div class="absolute left-5 bottom-5">
+                  <a
+                    href="#slide2"
+                    class="btn btn-circle bg-cBlack text-white border-0"
+                    >❮</a
+                  >
+                  <a
+                    href="#slide4"
+                    class="btn btn-circle bg-cBlack text-white border-0"
+                    >❯</a
+                  >
+                </div>
+              </div><div id="slide4" class="carousel-item relative w-full">
+                <img src="src/Images/1.png" class="w-full grayscale" />
+                <div class="absolute left-5 bottom-5">
+                  <a
+                    href="#slide3"
+                    class="btn btn-circle bg-cBlack text-white border-0"
+                    >❮</a
+                  >
+                  <a
+                    href="#slide1"
+                    class="btn btn-circle bg-cBlack text-white border-0"
+                    >❯</a
+                  >
+                </div>
+              </div>
+            
+        </div>
+        <div class="lg:absolute bg-cBlack rounded-xl p-5 lg:max-w-[560px] right-10 bottom-10">
+            <h2 class="text-white font-bold text-xl mb-4">Meet all the heroes from the field</h2>
+            <p class="text-white font-light opacity-60">
+                Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. 
+            </p>
+        </div>
+      </section>
+    </header>
+    <main class="md:px-12 lg:px-16"></main>
     <footer></footer>
   </body>
 </html>
